@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
-// import Projects from '../components/Projects';
+import Projects from '../components/Projects';
 import Description from '../components/Description';
-// import SlidingImages from '../components/SlidingImages';
-// import Contact from '../components/Contact';
+import SlidingImages from '../components/SlidingImages';
+import Contact from '../components/Contact';
 
 export default function Home() {
 
@@ -29,15 +29,15 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.main}>
+    <main >
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Landing />
       <Description />
-      {/* <Projects /> */}
-      {/* <SlidingImages /> */}
-      {/* <Contact /> */}
+      <Projects />
+      <SlidingImages />
+      <Contact />
     </main>
   )
 }
